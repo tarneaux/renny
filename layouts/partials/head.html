@@ -2,7 +2,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>
-		{{ if .Page.Title }}
+    {{ if (and .Page.Title (ne .Page.Title .Site.Title)) }}
 			{{ title .Page.Title }} - {{ .Site.Title }}
 		{{ else }}
 			{{ .Site.Title }}
