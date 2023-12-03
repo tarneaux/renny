@@ -1,0 +1,27 @@
+baseURL: 'https://example.com'
+languageCode: 'en-us'
+title: "Example Site"
+author:
+  name: "You"
+  email: "you@example.com"
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+menu:
+  main:
+    - name: "Home"
+      url: "/"
+      weight: 1
+
+params:
+  favicon: false
+  description: "Test website"
+  navbar: false
+
+module:
+  hugoVersion:
+    extended: false
+    min: "0.116.0"

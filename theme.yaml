@@ -1,0 +1,22 @@
+name: 'Renny'
+license: 'GPL-2.0'
+licenselink: 'https://github.com/tarneaux/renny/LICENSE'
+description: 'The Hugo theme used on tarneo.fr and renn.es'
+
+# The home page of the theme, where the source can be found
+homepage: https://github.com/tarneaux/renny
+
+# If you have a running demo of the theme
+# demosite: https://owner.github.io/repo
+
+tags:
+  - blog
+  - minimal
+
+features:
+  - navbar
+  - footer
+
+author:
+  name: "tarneo"
+  homepage: "https://tarneo.fr"
