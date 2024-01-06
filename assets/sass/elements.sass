@@ -51,6 +51,10 @@ ul > li::marker
 // More information: https://stackoverflow.com/questions/1530685/hoe-can-i-keep-consistent-line-height-with-superscript-elements
 sup
   line-height: 0
+  font-size: 0.9em
+  // Reduce the y offset of the footnote reference just enough to prevent it from overlapping the line above
+  a
+    text-decoration: none
 
 pre, code
   overflow-x: scroll
