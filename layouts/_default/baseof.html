@@ -4,9 +4,11 @@
     <body>
         {{- partial "navbar.html" . -}}
         <div id="parent">
-            <main id="child">
-                {{- partial "header.html" . -}}
-                {{- block "main" . }}{{- end }}
+            <div id="child">
+                <main>
+                  {{- partial "header.html" . -}}
+                  {{- block "main" . }}{{- end }}
+                </main>
                 {{- partial "footer.html" . -}}
             </main>
         </div>
