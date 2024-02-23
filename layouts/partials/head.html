@@ -13,8 +13,8 @@
     <link rel="alternate" type="application/rss+xml" href="{{ . }}">
   {{ end }}
 
-  {{ if .Site.Params.description }}
-    <meta name="description" content="{{ .Site.Params.description }}">
+  {{ with .Site.Params.description }}
+    <meta name="description" content="{{ . }}">
   {{ end }}
 
   {{ with .Site.Params.favicon }}
