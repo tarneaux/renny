@@ -9,7 +9,9 @@
     {{ end }}
   </title>
 
-  <link rel="alternate" type="application/rss+xml" href="/posts/index.xml">
+  {{ with .Site.Params.feed }}
+    <link rel="alternate" type="application/rss+xml" href="{{ . }}">
+  {{ end }}
 
   {{ if .Site.Params.description }}
     <meta name="description" content="{{ .Site.Params.description }}">
