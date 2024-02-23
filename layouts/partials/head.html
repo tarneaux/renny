@@ -9,10 +9,6 @@
 		{{ end }}
 	</title>
 
-	{{ $sass := resources.Get "sass/main.sass" }}
-	{{ $style := $sass | resources.ToCSS | resources.Minify }}
-	<link rel="stylesheet" href="{{ $style.Permalink }}">
-
 	<link rel="alternate" type="application/rss+xml" href="/posts/index.xml">
 
 	{{ if .Site.Params.description }}
@@ -24,4 +20,12 @@
     {{ $favicon = $favicon.Resize "128x" }}
     <link rel="icon" href="{{ $favicon.Permalink }}">
   {{ end }}
+
+  {{ if .Param "math" }}
+    {{ partialCached "math.html" . }}
+  {{ end }}
+
+  {{ $sass := resources.Get "sass/main.sass" }}
+  {{ $style := $sass | resources.ToCSS | resources.Minify }}
+  <link rel="stylesheet" href="{{ $style.Permalink }}">
 </head>
