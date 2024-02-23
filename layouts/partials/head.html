@@ -1,19 +1,19 @@
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>
     {{ if .Page.Title }}
-			{{ title .Page.Title }} - {{ .Site.Title }}
-		{{ else }}
-			{{ .Site.Title }}
-		{{ end }}
-	</title>
+      {{ title .Page.Title }} - {{ .Site.Title }}
+    {{ else }}
+      {{ .Site.Title }}
+    {{ end }}
+  </title>
 
-	<link rel="alternate" type="application/rss+xml" href="/posts/index.xml">
+  <link rel="alternate" type="application/rss+xml" href="/posts/index.xml">
 
-	{{ if .Site.Params.description }}
-		<meta name="description" content="{{ .Site.Params.description }}">
-	{{ end }}
+  {{ if .Site.Params.description }}
+    <meta name="description" content="{{ .Site.Params.description }}">
+  {{ end }}
 
   {{ with .Site.Params.favicon }}
     {{ $favicon := resources.Get (printf "%s%s" "img/" .) }}
