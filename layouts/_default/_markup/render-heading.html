@@ -3,5 +3,5 @@
   <h1>{{ .Text | safeHTML}}</h1>
 </div>
 {{ else }}
-<h{{ .Level }} id="{{ .Anchor | safeURL }}"><a href="#{{ .Anchor | safeURL }}" style="text-decoration: none;">{{ strings.Repeat (math.Sub .Level 1) "#" }}</a> {{ .Text | safeHTML }}</h{{ .Level }}>
+<h{{ .Level }} id="{{ .Anchor | safeURL }}"><a href="#{{ .Anchor | safeURL }}" style="text-decoration: none;">{{ strings.Repeat (math.Sub .Level 1) "#" }}</a>&nbsp;{{ .Text | safeHTML }}</h{{ .Level }}>
 {{ end }}
