@@ -88,17 +88,13 @@ table
     padding: 0.5em
 
 blockquote
-  p
+  > p
     margin: 0
-  cite
-    // Align the citation to the right
-    width: 100%
+  > p:has(cite)
     text-align: right
-    font-size: 0.8em
-    font-style: normal
     color: var(--emphasis-color)
-  cite::before
-    content: "— "
+    > cite::before
+      content: "— "
 
 .gallery-item
   margin: 1rem 0
