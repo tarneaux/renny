@@ -1,0 +1,14 @@
+<header class="flex-column-center">
+  <h1>
+    {{ if .Page.Title }}
+      {{ .Page.Title }}
+    {{ else }}
+      {{ .Site.Title }}
+    {{ end }}
+  </h1>
+  {{ with .Page.Params.date }}
+    <p>
+      <time datetime="{{ . | time.Format "2006-01-02" }}">{{ . | time.Format ":date_long" }}</time>
+    </p>
+  {{ end }}
+</header>

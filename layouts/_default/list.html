@@ -1,13 +1,16 @@
 {{ define "main" }}
-    <div class="flex-column-center">
-        <h1>{{ title .Title }}</h1>
-    </div>
     {{ .Content }}
     <ul class="post-list">
         {{ range .Pages }}
             <li>
                 <div>
-                    <strong>{{ .Date.Format "January 2, 2006" }}:</strong>
+                    {{ if .Date }}
+                      <strong>
+                        <datetime datetime="{{ .Date | time.Format ":date_long" }}">
+                          {{- .Date | time.Format ":date_long" -}}
+                        </datetime>:
+                      </strong>
+                    {{ end }}
                     <a href="{{ .Permalink }}">{{ title .Title }}</a>
                     ~;~
                     {{ .Summary | truncate 200 }}

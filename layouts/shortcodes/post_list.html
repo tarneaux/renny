@@ -2,7 +2,11 @@
 <ul class="post-list">
   {{ range $posts.Pages }}
   <li>
-    <strong>{{ .Date.Format "January 2, 2006" }}:</strong>
+    <strong>
+      <time datetime="{{ .Date | time.Format "2006-01-02" }}">
+        {{ .Date | time.Format ":date_long" }}
+      </time>:
+    </strong>
     <a href="{{ .Permalink }}">{{ title .Title }}</a>
     ~;~
     {{ .Summary | truncate 200 }}
