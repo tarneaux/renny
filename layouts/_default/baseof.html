@@ -2,11 +2,10 @@
 <html lang="{{ .Site.LanguageCode }}">
     {{- partial "head.html" . -}}
     <body>
-        {{- partial "navbar.html" . -}}
+        {{- partial "header.html" . -}}
         <div id="parent">
             <div id="child">
                 <main>
-                  {{- partial "header.html" . -}}
                   {{- partial "page-title.html" . -}}
                   {{- block "main" . }}{{- end }}
                 </main>
