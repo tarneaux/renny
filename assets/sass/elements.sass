@@ -11,7 +11,6 @@ h1, h2, h3, h4, h5, h6
   margin: 0
   font-weight: bold
   color: var(--emphasis-color)
-  border-bottom: 1px solid var(--emphasis-color)
   font-size: 1em
   padding: 0.25em
   width: fit-content
@@ -26,6 +25,18 @@ h1, h2, h3, h4, h5, h6
   h1
     border-bottom: 5px double var(--emphasis-color)
     text-align: center // matters for long titles
+  h2
+    border-bottom: 1px solid var(--emphasis-color)
+  h3
+    border-bottom: 1px dashed var(--emphasis-color)
+    margin-left: 0.5em
+  h4
+    border-bottom: 1px dotted var(--emphasis-color)
+    margin-left: 1em
+  h5
+    margin-left: 1.5em
+  h6
+    margin-left: 2em
 
 .flex-column-center // Used to center level 1 headings and post titles
   display: flex
