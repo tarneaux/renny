@@ -20,6 +20,7 @@ params:
   favicon: false
   description: "Test website"
   navbar: false
+  monospace: false
 
 module:
   hugoVersion:

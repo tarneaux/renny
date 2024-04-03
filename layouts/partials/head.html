@@ -30,4 +30,24 @@
   {{ $sass := resources.Get "sass/main.sass" }}
   {{ $style := $sass | resources.ToCSS | resources.Minify }}
   <link rel="stylesheet" href="{{ $style.Permalink }}">
+
+  <style>
+    {{ if .Site.Params.monospace }}
+      body {
+        font-family: monospace;
+      }
+
+      #child {
+        width: Min(80ch, 95vw);
+      }
+    {{ else }}
+      body {
+        font-family: sans-serif;
+      }
+
+      #child {
+        width: Min(45em, 95vw);
+      }
+    {{ end }}
+  </style>
 </head>
