@@ -4,6 +4,9 @@
       <h1>
         {{ .Site.Title }}
       </h1>
+      <p>
+        {{ .Site.Params.Description }}
+      </p>
       <nav>
         {{ range .Site.Menus.main }}
           <a href="{{ .URL }}">{{ .Name }}</a>
