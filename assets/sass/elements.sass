@@ -14,9 +14,6 @@ h1, h2, h3, h4, h5, h6
   font-size: 1em
   padding: 0.25em
   width: fit-content
-  > a
-    color: inherit
-    text-decoration: none
 
 #child
   h1, h2, h3, h4, h5, h6
@@ -25,6 +22,9 @@ h1, h2, h3, h4, h5, h6
   h1
     border-bottom: 5px double var(--emphasis-color)
     text-align: center // matters for long titles
+    margin-left: auto
+    margin-right: auto
+
   h2
     border-bottom: 1px solid var(--emphasis-color)
   h3
@@ -37,14 +37,6 @@ h1, h2, h3, h4, h5, h6
     margin-left: 1.5em
   h6
     margin-left: 2em
-
-.flex-column-center // Used to center level 1 headings and post titles
-  display: flex
-  flex-direction: column
-  align-items: center
-  justify-content: center
-  *
-    margin: 0
 
 b, strong
   color: var(--emphasis-color)
