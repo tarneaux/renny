@@ -1,17 +1,28 @@
 {{ if .Site.Params.navbar }}
-  <center>
-    <div id="navbar">
+  <div id="header">
+    <div class="header-line">
       <h1>
-        {{ .Site.Title }}
+        {{ .Site.Title | strings.ToUpper }}
       </h1>
-      <p>
-        {{ .Site.Params.Description }}
-      </p>
+
+      {{ with .Page.Title }}
+        <h2>
+          {{ . }}
+        </h2>
+      {{ end }}
+    </div>
+
+    <hr />
+
+    <div class="header-line">
       <nav>
         {{ range .Site.Menus.main }}
           <a href="{{ .URL }}">{{ .Name }}</a>
         {{ end }}
       </nav>
+      {{ with .Page.Params.date }}
+        <time datetime="{{ . | time.Format "2006-01-02" }}">{{ . | time.Format ":date_long" }}</time>
+      {{ end }}
     </div>
-  </center>
+  </div>
 {{ end }}
