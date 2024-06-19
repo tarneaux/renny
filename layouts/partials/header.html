@@ -15,9 +15,9 @@
 
     {{ if .Page.Title }}
       <div class="header-line">
-        <h2>
+        <h1>
           {{ .Page.Title }}
-        </h2>
+        </h1>
         {{ with .Page.Params.date }}
           <time datetime="{{ . | time.Format "2006-01-02" }}">{{ . | time.Format ":date_long" }}</time>
         {{ end }}

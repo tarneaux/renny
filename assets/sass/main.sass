@@ -25,9 +25,12 @@ img
   margin-bottom: 1em
   *
     font-weight: bold
+    padding: 0
     color: var(--emphasis-color)
-  nav
-    padding: 0.25em
+  a
+    margin: 0
+  h1, nav, time
+    margin: 0.25em
 
 .header-line
   display: flex
@@ -35,13 +38,6 @@ img
   flex-wrap: wrap
   width: 100%
   margin: 0
-
-.header-line > *:first-child
-  margin-left: 0
-  margin-right: auto
-
-.header-line > *:last-child:not(:first-child)
-  margin-left: auto
 
 #post-footer
   display: flex
