@@ -27,6 +27,10 @@
     {{ partialCached "math.html" . }}
   {{ end }}
 
+  {{ range .Site.Params.meta }}
+    <meta name="{{ .name }}" content="{{ .content }}">
+  {{ end }}
+
   {{ $sass := resources.Get "sass/main.sass" }}
   {{ $style := $sass | resources.ToCSS | resources.Minify }}
   <link rel="stylesheet" href="{{ $style.Permalink }}">
