@@ -9,7 +9,7 @@
     </strong>
     <a href="{{ .Permalink }}">{{ .Title }}</a>
     ~;~
-    {{ .Summary | truncate 200 }}
+    {{ .Summary | transform.Plainify | truncate 200 }}
   </li>
   {{ end }}
 </ul>
