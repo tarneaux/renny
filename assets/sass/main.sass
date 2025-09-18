@@ -34,6 +34,9 @@ img
     flex-wrap: wrap
     width: 100%
     margin: 0
+    > time:last-child
+      text-align: right
+      flex-grow: 1
 
 #post-footer
   display: flex
@@ -119,6 +122,9 @@ sup:has(a.footnote-ref)
     content: ']'
 
 .footnotes > ol > li:target
+  animation: blink 0.25s linear 3
+
+*:target
   animation: blink 0.25s linear 3
 
 @keyframes blink
