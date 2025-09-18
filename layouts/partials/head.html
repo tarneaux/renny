@@ -33,5 +33,6 @@
 
   {{ $sass := resources.Get "sass/main.sass" }}
   {{ $style := $sass | css.Sass | resources.Minify }}
+  {{ $style := $style | resources.Fingerprint }}{{/* cache busting */}}
   <link rel="stylesheet" href="{{ $style.Permalink }}">
 </head>
