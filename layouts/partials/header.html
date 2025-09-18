@@ -1,6 +1,6 @@
 {{ if .Site.Params.navbar }}
-  <div id="header">
-    <div class="header-line">
+  <div id="site-header">
+    <div>
       <h1>
         {{ .Site.Title | strings.ToUpper }}
       </h1>
@@ -14,7 +14,7 @@
     <hr />
 
     {{ if .Page.Title }}
-      <div class="header-line">
+      <div>
         <h1>
           {{ .Page.Title }}
         </h1>
