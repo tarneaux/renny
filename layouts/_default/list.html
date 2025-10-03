@@ -1,22 +1,5 @@
 {{ define "main" }}
     {{ .Content }}
-    <ul class="post-list">
-        {{ range .Pages }}
-            <li>
-                <div>
-                    {{ if .Date }}
-                      <strong>
-                        <datetime datetime="{{ .Date | time.Format ":date_long" }}">
-                          {{- .Date | time.Format ":date_long" -}}
-                        </datetime>:
-                      </strong>
-                    {{ end }}
-                    <a href="{{ .Permalink }}">{{ .Title }}</a>
-                    ~;~
-                    {{ .Summary | truncate 200 }}
-                </div>
-            </li>
-        {{ end }}
-    </ul>
+    {{ partial "post_list" }}
     <a href="index.xml">RSS</a>
 {{ end }}
