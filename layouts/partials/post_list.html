@@ -1,22 +1,23 @@
 {{ $posts := site.GetPage "/posts" }}
 <div class="post-list">
-{{ range $key, $tag := $posts.Pages.GroupByDate "2006" }}
-<div>
-<div class="sep">
-  ~ {{ .Key }} ~
-</div>
-<ul>
+{{ range $posts.Pages.GroupByDate "2006" }}
+<table>
+  <tr>
+    <th />
+    <th>
+      ~~~~~ {{ .Key }}
+    </th>
+  </tr>
   {{ range .Pages }}
-  <li>
+  <tr>
+    <td><a href="{{ .Permalink }}">{{ .Title }}</a></td>
+    <td>
     <time datetime="{{ .Date | time.Format "2006-01-02" }}">
-      {{- .Date | time.Format "January 2" -}}:
+      {{- .Date | time.Format "January 2" -}}
     </time>
-    <a href="{{ .Permalink }}">{{ .Title }}</a>
-    -
-    {{ .Summary | transform.Plainify | truncate 200 }}
-  </li>
+    </td>
+  </tr>
   {{ end }}
-</ul>
-</div>
+</table>
 {{ end }}
 </div>

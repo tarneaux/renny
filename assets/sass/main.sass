@@ -180,18 +180,21 @@ blockquote
   padding: 1ch
 
 .post-list
-  div.sep
-    margin: .5em 0
-    text-align: center
-    color: var(--emphasis-color)
-  div:first-child > div.sep
-    margin-top: 0
-  ul
-    padding: 0
-    li > time
+  table
+    margin-top: 1em
+    &:first-child
+      margin-top: 0
+    width: 100%
+    td,th
+      border: none
+      padding: 0
+      time
+        text-wrap: nowrap
+      &:last-child
+        text-align: right
+    th
       color: var(--emphasis-color)
-    li::marker
-      content: ""
+      font-weight: normal
 
 // Reset the font size for KaTeX elements
 .katex
