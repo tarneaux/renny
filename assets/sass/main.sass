@@ -138,11 +138,13 @@ pre > code
   display: block // Prevents tabs from overflowing on borders making them discontinuous
 
 pre:has(code)
+  border: 1px solid var(--emphasis-color)
   padding: 1ch
 
 *:not(pre) > code
   padding: 0px 4px
-  font-size: 0.9em // To prevent text lines from overlapping
+  box-shadow: inset 0px 0px 0px 1px rgbavar(--emphasis-color)
+  height: 1em
 
 pre
   padding: 1em
