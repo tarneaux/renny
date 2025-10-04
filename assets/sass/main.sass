@@ -21,11 +21,12 @@ img
 //   HEADER AND FOOTER
 // =====================
 
-#site-header
-  margin-bottom: 1em
+header#site-header
+  margin-bottom: .5em
   *
     font-weight: bold
     padding: 0
+    margin: 0
     color: var(--emphasis-color)
 
   > div
@@ -38,14 +39,14 @@ img
       text-align: right
       flex-grow: 1
 
-#post-footer
+footer#post-footer
   display: flex
   flex-direction: row
   justify-content: space-between
-  margin-top: 2em
+  margin-top: 1em
 
-#site-footer
-  margin-top: 2em
+footer#site-footer
+  margin-top: 1em
 
 // ==================
 //   COLORS & FONTS
@@ -88,25 +89,22 @@ ul > li::marker
 //   SMALL ADJUSTMENTS
 // =====================
 
+h1, h2, h3, h4, h5, h6
+  font-weight: bold
+  font-size: 1em
+
 main
   // h1 should never appear in main
   h2, h3, h4, h5, h6
     padding: 0
-    margin-top: .5em
-    margin-bottom: .25em
+    margin: .5em 0
+    width: fit-content
   h2
     border-bottom: 1px solid
   h3
     border-bottom: 1px dashed
   h4
     border-bottom: 1px dotted
-
-h1, h2, h3, h4, h5, h6
-  margin: 0
-  font-weight: bold
-  font-size: 1em
-  padding: 0.25em
-  width: fit-content
 
 // Prevent footnote references from adding height to the line
 // More information: https://stackoverflow.com/questions/1530685/hoe-can-i-keep-consistent-line-height-with-superscript-elements
@@ -138,6 +136,9 @@ sup:has(a.footnote-ref)
 pre > code
   text-wrap: wrap
   display: block // Prevents tabs from overflowing on borders making them discontinuous
+
+pre:has(code)
+  padding: 1ch
 
 *:not(pre) > code
   padding: 0px 4px
